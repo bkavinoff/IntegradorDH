@@ -17,7 +17,7 @@
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Inicio</a></li>
-                <li><a href="#faq">F.A.Q.</a></li>
+                <li><a href="faq.php">F.A.Q.</a></li>
                 <li><a href="registro.php">Registrarse</a></li>
                 <li><a href="ingresar.php">Loguearse</a></li>
               </ul>
@@ -80,10 +80,10 @@
       </div>
       <!--//////////////<CONTENIDO>///////////////-->
 
-      <!--//////////////<FOOTER>///////////////-->
+    <!--//////////////</FOOTER>///////////////-->
       <div class="container-fluid footer">
             <footer>
-              <p class="text-center">&copy; Copyright 2017  Andres Barrios - Brian Kavinoff - Sebastian Portela</p>
+              <p class="text-center">&copy; Copyright 2017  Andres Barrios - Brian Kavinoff - Javier Portela</p>
             </footer>
       </div>
     </div>

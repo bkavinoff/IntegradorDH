@@ -91,7 +91,20 @@ div .comentario {
   padding: inherit;
   margin-bottom: 2%;
 }
+/******************<FAQ's>************/
+.faq-container{
+  list-style: none;
+  padding-left: 25px;
+  margin-bottom: 2%;
 
+
+}
+.faq-container a{
+  color: black;
+
+}
+
+/******************<FAQ's>************/
 label {
   text-align: right;
 }
