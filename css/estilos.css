@@ -79,3 +79,37 @@ footer p{
   margin:0;
 }
 /******************<FOOTER>**************/
+
+/******************<REGISTRO>************/
+div .comentario {
+  font-size:10px;
+  margin-left: 10%;
+}
+
+.fondoregistracion {
+  background-color: rgba(255,255,255,0.8);
+  padding: inherit;
+  margin-bottom: 2%;
+}
+
+label {
+  text-align: right;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid #CED5D7;
+  background-color: white;
+  box-shadow: 1px 0px 3px #B5C1C5;
+  margin-left: 10 px;
+  font-size: 15px;
+}
+
+input:focus {
+  background-color: ;
+}
+
+textarea {
+  resize: vertical;
+}
+/******************<REGISTRO>************/

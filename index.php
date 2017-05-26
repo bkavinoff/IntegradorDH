@@ -18,8 +18,8 @@
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Inicio</a></li>
                 <li><a href="#faq">F.A.Q.</a></li>
-                <li><a href="#registrar">Registrarse</a></li>
-                <li><a href="#loguear">Loguearse</a></li>
+                <li><a href="registro.php">Registrarse</a></li>
+                <li><a href="ingresar.php">Loguearse</a></li>
               </ul>
             </div>
           </div>
