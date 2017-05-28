@@ -7,6 +7,25 @@
 		<link rel="stylesheet" href="css/estilos.css">
 	</head>
 	<body>
+		<!--//////////////<MENU SUPERIOR>///////////////-->
+		<nav class="navbar"><!--   navbar-inverse  -->
+				<div class="container">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">Integrador DH</a>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="index.php">Inicio</a></li>
+							<li><a href="faq.php">F.A.Q.</a></li>
+							<li><a href="registro.php">Registrarse</a></li>
+							<li><a href="ingresar.php">Loguearse</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		<!--//////////////</MENU SUPERIOR>///////////////-->
+
+		<!--//////////////<CONTENIDO>///////////////-->
     <div class="container">
       <div class="row">
 				<div class="col-lg-12 col-md-12 col-xs-12">
@@ -45,32 +64,19 @@
 		    <button type="button" class = "btn btn-success vermas">INGRESAR</button>
 		    <br>
 		    <br>
-        <br>
+				<br>
 				</header>
 
-				<div class="container-fluid footer">
-				<footer>
-        <div class="container4">
-   			 <div class="row">
-   				 <div class="col-lg-10 col-md-10 col-xs-10">
-    		   		<p class = "espacio"></p>
-    				</div>
-   			 	<div class="col-lg-2 col-md-2 col-xs-2">
-   		   		<a class = "volver" href="index.php" target="INICIO">VOLVER </a>
-   				</div>
-   			</div>
-   		</div>
-		</footer>
-		</form>
+		<!--//////////////<CONTENIDO>///////////////-->
 
-
-
-
-
-
-		<?php
-
-		?>
+		<!--//////////////</FOOTER>///////////////-->
+			<div class="container-fluid footer">
+						<footer>
+							<p class="text-center">&copy; Copyright 2017  Andres Barrios - Brian Kavinoff - Javier Portela</p>
+						</footer>
+			</div>
+		</div>
+		<!--//////////////</FOOTER>///////////////-->
 
 	</body>
 </html>
