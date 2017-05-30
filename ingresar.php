@@ -18,7 +18,7 @@
 							<li class="active"><a href="index.php">Inicio</a></li>
 							<li><a href="faq.php">F.A.Q.</a></li>
 							<li><a href="registro.php">Registrarse</a></li>
-							<li><a href="ingresar.php">Loguearse</a></li>
+							<li><a href="ingresar.php">Ingresá</a></li>
 						</ul>
 					</div>
 				</div>
@@ -56,7 +56,9 @@
               <div class="row">
           <div class="col-lg-4 col-md-4 col-xs-4">
 				<label class= "cuadro"   for="Contraseña"> </label>
-					<input type="Contraseña" placeholder="Ingresa tu contraseña"name="Contraseña" required>
+					<input type="password" placeholder="Ingresa tu contraseña"name="Contraseña" required>
+					<br>
+					<a href="#">¿Olvidaste tu contraseña?</a>
         </div>
         </div>
 			 <br>

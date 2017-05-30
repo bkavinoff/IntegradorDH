@@ -20,7 +20,7 @@
                 <li class="active"><a href="index.php">Inicio</a></li>
                 <li><a href="faq.php">F.A.Q.</a></li>
                 <li><a href="registro.php">Registrarse</a></li>
-                <li><a href="ingresar.php">Loguearse</a></li>
+                <li><a href="ingresar.php">Ingresá</a></li>
               </ul>
             </div>
           </div>

@@ -19,7 +19,7 @@
 							<li class="active"><a href="index.php">Inicio</a></li>
 							<li><a href="faq.php">F.A.Q.</a></li>
 							<li><a href="registro.php">Registrarse</a></li>
-							<li><a href="ingresar.php">Loguearse</a></li>
+							<li><a href="ingresar.php">Ingresá</a></li>
 						</ul>
 					</div>
 				</div>
@@ -32,7 +32,7 @@
 				<div class="col-lg-12 col-md-12 col-xs-12">
 					<div class="main-header">
 						<div class="jumbotron text-center">
-					<h1>REGISTRACION</h1>
+					<h1>REGISTRACIÓN</h1>
 					<p class = "parrafo">Por favor ingresa los siguientes datos para registrarte. Todos los campos son obligatorios.</p>
 				</div>
 			</div>
@@ -53,7 +53,7 @@
 					</div>
 					<div class="col-lg-5 col-md-5 col-xs-5">
 						<label class= "cuadro" for="Contraseña"> Contraseña: </label>
-							<input type="Contraseña" name="Contraseña" required>
+							<input type="password" name="Contraseña" required>
 					</div>
 	  		</div>
 			</div>
@@ -69,7 +69,7 @@
 						<p class = "espacio"></p>
 					</div>
 	 					<div class="col-lg-5 col-md-5 col-xs-5">
-	 						<label class= "cuadro" for="Direccion"> Direccion: </label>
+	 						<label class= "cuadro" for="Direccion"> Dirección: </label>
 	 							<input type="Direccion" name="Direccion" required>
 	 							<br>
 	 								<div class = "comentario">calle, número, piso, departamento</div>
@@ -84,7 +84,7 @@
 						<label class= "cuadro" for="DNI"> DNI: </label>
 							<input type="textr" name="DNI" required size="8" maxlength="8">
 							<br>
-								<div class = "comentario">Solo numeros</div>
+								<div class = "comentario">Solo números</div>
 					</div>
 					<div class="col-lg-1 col-md-1 col-xs-1">
 						<p class = "espacio"></p>
@@ -128,10 +128,10 @@
 			<div class="container2">
 	      <div class="row">
 					<div class="col-lg-5 col-md-5 col-xs-5">
-			 			<label class= "cuadro" for="Telefono"> Telefono: </label>
+			 			<label class= "cuadro" for="Telefono"> Teléfono: </label>
 				 			<input type="textr" name="Telefono" required >
 				 			<br>
-				 				<div class = "comentario">Solo numeros y guiones</div>
+				 				<div class = "comentario">Solo números y guiones</div>
 			 		</div>
 					<div class="col-lg-1 col-md-1 col-xs-1">
 						<p class = "espacio"></p>
