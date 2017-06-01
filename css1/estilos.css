@@ -83,7 +83,7 @@ footer p{
 /******************<REGISTRO>************/
 div .comentario {
   font-size:10px;
-  margin-left: 10%;
+  margin-left: 4%;
 }
 
 .fondoregistracion {
@@ -105,8 +105,9 @@ div .comentario {
 }
 
 /******************<FAQ's>************/
-label {
+label   {
   text-align: right;
+  margin-left: 3%;
 }
 
 input {

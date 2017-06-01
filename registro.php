@@ -3,11 +3,12 @@
 	<head>
     <title>REGISTRACION</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" href="css/estilos.css">
+		<link rel="stylesheet" href="css1/bootstrap.css">
+		<link rel="stylesheet" href="css1/estilos.css">
 	</head>
 	<body>
 
+<div class="container">
 		<!--//////////////<MENU SUPERIOR>///////////////-->
 		<nav class="navbar"><!--   navbar-inverse  -->
 				<div class="container">
@@ -26,34 +27,31 @@
 			</nav>
 		<!--//////////////</MENU SUPERIOR>///////////////-->
 
-		<!--//////////////<CONTENIDO>///////////////-->
-		<div class="container">
-      <div class="row">
-				<div class="col-lg-12 col-md-12 col-xs-12">
-					<div class="main-header">
-						<div class="jumbotron text-center">
+		<!--//////////////<CABECERA>///////////////-->
+		<div class="main-header">
+			<div class="jumbotron text-center">
 					<h1>REGISTRACIÓN</h1>
 					<p class = "parrafo">Por favor ingresa los siguientes datos para registrarte. Todos los campos son obligatorios.</p>
 				</div>
 			</div>
-				</div>
-			</div>
+		<!--//////////////<CABECERA>///////////////-->
 
+			<!--//////////////<CONTENIDO>///////////////-->
 		<header class ="fondoregistracion">
 		<form action="script.php" method="post">
 			<br>
 			<div class="container2">
 	      <div class="row">
 					<div class="col-lg-5 col-md-5 col-xs-5">
-		      	<label class= "cuadro" for="Nombre"> Nombre: </label>
-		        	<input type="text" name="nombre usuario" required>
+		      	<label class= "cuadro" for="Nombre"></label>
+		        	<input type="text" placeholder="Nombre" name="nombre usuario" required>
 					</div>
-				 <div class="col-lg-1 col-md-1 col-xs-1">
+				 <div class="col-lg-2 col-md-2 col-xs-2">
 					 <p class = "espacio"></p>
 					</div>
 					<div class="col-lg-5 col-md-5 col-xs-5">
-						<label class= "cuadro" for="Contraseña"> Contraseña: </label>
-							<input type="password" name="Contraseña" required>
+						<label class= "cuadro" for="Contraseña"></label>
+							<input type="password" placeholder="Contraseña" name="Contraseña" required>
 					</div>
 	  		</div>
 			</div>
@@ -62,15 +60,15 @@
 				<div class="container2">
 		      <div class="row">
 						<div class="col-lg-5 col-md-5 col-xs-5">
-				 			<label class= "cuadro" for="Apellido"> Apellido: </label>
-					 			<input type="text" name="apellido usuario" required>
+				 			<label class= "cuadro" for="Apellido"></label>
+					 			<input type="text" placeholder="Apellido" name="apellido usuario" required>
 				 		</div>
-					<div class="col-lg-1 col-md-1 col-xs-1">
+					<div class="col-lg-2 col-md-2 col-xs-2">
 						<p class = "espacio"></p>
 					</div>
 	 					<div class="col-lg-5 col-md-5 col-xs-5">
-	 						<label class= "cuadro" for="Direccion"> Dirección: </label>
-	 							<input type="Direccion" name="Direccion" required>
+	 						<label class= "cuadro" for="Direccion"></label>
+	 							<input type="Direccion" placeholder="Dirección" name="Direccion" required>
 	 							<br>
 	 								<div class = "comentario">calle, número, piso, departamento</div>
 	 					</div>
@@ -81,18 +79,18 @@
 			 <div class="container2">
  	      <div class="row">
  					<div class="col-lg-5 col-md-5 col-xs-5">
-						<label class= "cuadro" for="DNI"> DNI: </label>
-							<input type="textr" name="DNI" required size="8" maxlength="8">
+						<label class= "cuadro" for="DNI"></label>
+							<input type="textr" placeholder="DNI" name="DNI" required size="8" maxlength="8">
 							<br>
 								<div class = "comentario">Solo números</div>
 					</div>
-					<div class="col-lg-1 col-md-1 col-xs-1">
+					<div class="col-lg-2 col-md-2 col-xs-2">
 						<p class = "espacio"></p>
 					</div>
 				 	<div class="col-lg-5 col-md-5 col-xs-5">
-			      <label class= "cuadro">Provincia: </label>
+			      <label class= "cuadro"></label>
 			        <select name="asuntos" required>
-								<option value="" selected="" disabled="">Seleccionar</option>
+								<option value="" selected="" disabled="">Seleccionar Provincia</option>
 			          <option value="">--CABA</option>
 								<option value="">--Gran Buenos Aires</option>
 								<option value="">Buenos Aires</option>
@@ -128,17 +126,17 @@
 			<div class="container2">
 	      <div class="row">
 					<div class="col-lg-5 col-md-5 col-xs-5">
-			 			<label class= "cuadro" for="Telefono"> Teléfono: </label>
-				 			<input type="textr" name="Telefono" required >
+			 			<label class= "cuadro" for="Telefono"></label>
+				 			<input type="textr" placeholder="Teléfono" name="Telefono" required >
 				 			<br>
 				 				<div class = "comentario">Solo números y guiones</div>
 			 		</div>
-					<div class="col-lg-1 col-md-1 col-xs-1">
+					<div class="col-lg-2 col-md-2 col-xs-2">
 						<p class = "espacio"></p>
 					</div>
 					 <div class="col-lg-5 col-md-5 col-xs-5">
-			 		 	<label class= "cuadro" for="Localidad"> Localidad: </label>
-				 			<input type="Localidad" name="Localidad" required>
+			 		 	<label class= "cuadro" for="Localidad"></label>
+				 			<input type="Localidad" placeholder="Localidad" name="Localidad" required>
 			 		</div>
 		 		</div>
 		 	</div>
@@ -147,15 +145,15 @@
 		 <div class="container2">
 			 <div class="row">
 				 <div class="col-lg-5 col-md-5 col-xs-5">
-		      	<label class= "cuadro" for="E-mail"> E-mail: </label>
-		        	<input type="email" name="correo" required>
+		      	<label class= "cuadro" for="E-mail"></label>
+		        	<input type="email" placeholder="E-mail" name="correo" required>
 					</div>
-					<div class="col-lg-1 col-md-1 col-xs-1">
+					<div class="col-lg-2 col-md-2 col-xs-2">
 						<p class = "espacio"></p>
 					</div>
 					<div class="col-lg-5 col-md-5 col-xs-5">
-						<label class= "cuadro" for="Codigo Postal"> CP: </label>
-							<input type="Codigo Postal" name="Codigo Postal" required>
+						<label class= "cuadro" for="Codigo Postal"></label>
+							<input type="Codigo Postal" placeholder="CP" name="Codigo Postal" required>
 					</div>
 				</div>
 		</div>
@@ -183,6 +181,8 @@
 		 </div>
 	 </div>
 	 <!--//////////////</FOOTER>///////////////-->
+
+</div>
 
 	</body>
 </html>

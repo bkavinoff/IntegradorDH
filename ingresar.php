@@ -3,10 +3,12 @@
 	<head>
     <title>INGRESAR</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" href="css/estilos.css">
+		<link rel="stylesheet" href="css1/bootstrap.css">
+		<link rel="stylesheet" href="css1/estilos.css">
 	</head>
 	<body>
+
+<div class="container">
 		<!--//////////////<MENU SUPERIOR>///////////////-->
 		<nav class="navbar"><!--   navbar-inverse  -->
 				<div class="container">
@@ -25,27 +27,24 @@
 			</nav>
 		<!--//////////////</MENU SUPERIOR>///////////////-->
 
-		<!--//////////////<CONTENIDO>///////////////-->
-    <div class="container">
-      <div class="row">
-				<div class="col-lg-12 col-md-12 col-xs-12">
+  	<!--//////////////<CABECERA>///////////////-->
 					<div class="main-header">
 						<div class="jumbotron text-center">
 		        <h1>ACCEDER</h1>
 						<div class="parrafo">Escribe tu e-mail y contraseña para ingresar.</div>
 					</div>
 				</div>
-        </div>
-        </div>
     <br>
+		<!--//////////////<CABECERA>///////////////-->
 
+		<!--//////////////<CONTENIDO>///////////////-->
 			<header class ="fondoregistracion">
   		<form action="script.php" method="post">
 			<br>
       <div class="container2">
           <div class="row">
 		      <div class="col-lg-4 col-md-4 col-xs-4">
-		      <label class= "cuadro" for="E-mail"></label>
+		      <label class= "cuadro2" for="E-mail"></label>
 		        <input type="email" placeholder="Ingresa tu E-mail"name="correo" required>
           </div>
           </div>
@@ -79,6 +78,8 @@
 			</div>
 		</div>
 		<!--//////////////</FOOTER>///////////////-->
+
+</div>
 
 	</body>
 </html>

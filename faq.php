@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css1/bootstrap.css">
+    <link rel="stylesheet" href="css1/estilos.css">
     <meta charset="utf-8">
     <title>Preguntas frecuentes</title>
   </head>
