@@ -1,3 +1,26 @@
+<?php
+
+require_once "validaciones.php";
+require_once "usuarios.php";
+
+// Inicializar mi usuario
+
+$fueCompletado = isset($_REQUEST['submitted']);
+$errores   = 0 ;
+
+if ($fueCompletado) {
+    $resultado = guardarUsuario($_REQUEST['nombre'], $_REQUEST['apellido'], $_REQUEST['correo'], $_REQUEST['username'], $_REQUEST['password'], $_FILES['avatar']);
+
+    if (is_array($resultado) && ! empty($resultado)) {
+        echo "Hubo errores";
+      }
+    else {
+        echo "Usted se registro correctamente";
+      }
+ }
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -37,139 +60,114 @@
 		<!--//////////////<CABECERA>///////////////-->
 
 			<!--//////////////<CONTENIDO>///////////////-->
+
 		<header class ="fondoregistracion">
-		<form action="script.php" method="post">
-			<br>
+		<form id='registro' action='registro.php' method='post' enctype="multipart/form-data">
+				<fieldset >
+		<br>
+
+		<input type='hidden' name='submitted' id='submitted' value='1'/>
+
+		<div><span class='error'></span></div>
 			<div class="container2">
 	      <div class="row">
 					<div class="col-lg-5 col-md-5 col-xs-5">
 		      	<label class= "cuadro" for="Nombre"></label>
-		        	<input type="text" placeholder="Nombre" name="nombre usuario" required>
+		        	<input type="text" placeholder="Nombre" name="nombre" id= "nombre" value= '' maxlength="50" required>
+							<span style="color: red"  class='error'>
+									<?php
+											if (isset($errores['nombre'])) {
+													echo "El nombre ingresado no es valido";
+											}
+									?>
+							</span>
 					</div>
-				 <div class="col-lg-2 col-md-2 col-xs-2">
-					 <p class = "espacio"></p>
-					</div>
-					<div class="col-lg-5 col-md-5 col-xs-5">
-						<label class= "cuadro" for="Contraseña"></label>
-							<input type="password" placeholder="Contraseña" name="Contraseña" required>
-					</div>
-	  		</div>
-			</div>
-		    <br>
-
-				<div class="container2">
-		      <div class="row">
-						<div class="col-lg-5 col-md-5 col-xs-5">
-				 			<label class= "cuadro" for="Apellido"></label>
-					 			<input type="text" placeholder="Apellido" name="apellido usuario" required>
-				 		</div>
-					<div class="col-lg-2 col-md-2 col-xs-2">
-						<p class = "espacio"></p>
-					</div>
-	 					<div class="col-lg-5 col-md-5 col-xs-5">
-	 						<label class= "cuadro" for="Direccion"></label>
-	 							<input type="Direccion" placeholder="Dirección" name="Direccion" required>
-	 							<br>
-	 								<div class = "comentario">calle, número, piso, departamento</div>
-	 					</div>
-			 		</div>
 				</div>
-			 <br>
-
-			 <div class="container2">
- 	      <div class="row">
- 					<div class="col-lg-5 col-md-5 col-xs-5">
-						<label class= "cuadro" for="DNI"></label>
-							<input type="textr" placeholder="DNI" name="DNI" required size="8" maxlength="8">
-							<br>
-								<div class = "comentario">Solo números</div>
-					</div>
-					<div class="col-lg-2 col-md-2 col-xs-2">
-						<p class = "espacio"></p>
-					</div>
-				 	<div class="col-lg-5 col-md-5 col-xs-5">
-			      <label class= "cuadro"></label>
-			        <select name="asuntos" required>
-								<option value="" selected="" disabled="">Seleccionar Provincia</option>
-			          <option value="">--CABA</option>
-								<option value="">--Gran Buenos Aires</option>
-								<option value="">Buenos Aires</option>
-			          <option value="">Cordoba</option>
-								<option value="">La Pampa</option>
-								<option value="">Tierra dek Fuego</option>
-								<option value="">Santa Cruz</option>
-								<option value="">Neuquen</option>
-								<option value="">Tucuman</option>
-								<option value="">Mendoza</option>
-								<option value="">Entre Rios</option>
-								<option value="">Formosa</option>
-								<option value="">Misiones</option>
-								<option value="">Corrientes</option>
-								<option value="">Salta</option>
-								<option value="">Jujuy</option>
-								<option value="">Santa Fe</option>
-								<option value="">Chaco</option>
-								<option value="">Rio Negro</option>
-								<option value="">Chubut</option>
-								<option value="">Catamarca</option>
-								<option value="">San Luis</option>
-								<option value="">Santiago del Estero</option>
-								<option value="">San Juan</option>
-								<option value="">La Rioja</option>
-								<option value="">Formosa</option>
-			        </select>
-						</div>
-					</div>
 			</div>
 			<br>
 
 			<div class="container2">
-	      <div class="row">
-					<div class="col-lg-5 col-md-5 col-xs-5">
-			 			<label class= "cuadro" for="Telefono"></label>
-				 			<input type="textr" placeholder="Teléfono" name="Telefono" required >
-				 			<br>
-				 				<div class = "comentario">Solo números y guiones</div>
-			 		</div>
-					<div class="col-lg-2 col-md-2 col-xs-2">
-						<p class = "espacio"></p>
-					</div>
+			   <div class="row">
 					 <div class="col-lg-5 col-md-5 col-xs-5">
-			 		 	<label class= "cuadro" for="Localidad"></label>
-				 			<input type="Localidad" placeholder="Localidad" name="Localidad" required>
-			 		</div>
-		 		</div>
-		 	</div>
-		 	<br>
-
-		 <div class="container2">
-			 <div class="row">
-				 <div class="col-lg-5 col-md-5 col-xs-5">
-		      	<label class= "cuadro" for="E-mail"></label>
-		        	<input type="email" placeholder="E-mail" name="correo" required>
-					</div>
-					<div class="col-lg-2 col-md-2 col-xs-2">
-						<p class = "espacio"></p>
-					</div>
-					<div class="col-lg-5 col-md-5 col-xs-5">
-						<label class= "cuadro" for="Codigo Postal"></label>
-							<input type="Codigo Postal" placeholder="CP" name="Codigo Postal" required>
-					</div>
-				</div>
-		</div>
-		 <br>
-	   <br>
-		 <div class="container2">
-			 <div class="row">
-			 	<div class="col-lg-10 col-md-10 col-xs-10">
-					<p class = "espacio"></p>
-				</div>
-				 <div class="col-lg-2 col-md-2 col-xs-2">
-		 		 	<button class = "btn btn-success vermas" type="button">REGISTRARME</button>
+ 				 			<label class= "cuadro" for="Apellido"></label>
+ 					 			<input type="text" placeholder="Apellido" name="apellido" id = "apellido" maxlength="50" required>
+								<span style="color: red"  class='error'>
+										<?php
+												if (isset($errores['apellido'])) {
+														echo "El apellido ingresado no es valido";
+												}
+										?>
+							</span>
+						</div>
 				</div>
 			</div>
+			<br>
+
+			<div class="container2">
+				<div class="row">
+					<div class="col-lg-5 col-md-5 col-xs-5">
+ 		      	<label class= "cuadro" for="E-mail"></label>
+ 		        	<input type="text" placeholder="E-mail" name="correo" id = "correo" value=""  maxlength="50" required>
+							<span style="color: red"  class='error'>
+									<?php
+											if (isset($errores['correo'])) {
+													echo "El E-mail ingresado no es valido";
+											}
+									?>
+							</span>
+						</div>
+				</div>
+			</div>
+			<br>
+
+			<div class="container2">
+				<div class="row">
+					<div class="col-lg-5 col-md-5 col-xs-5">
+					<label class= "cuadro" for='username'></label>
+						<input type='text' placeholder="Nombre de Usuario" name='username' id='username' value='' maxlength="50" /><br/>
+						<span style="color: red"  class='error'>
+							<?php
+									if (isset($errores['username'])) {
+											echo "El username ingresado no es valido";
+									}
+							?>
+					</span>
+			</div>
 		</div>
+	</div>
+	<br>
+
+			<div class="container2">
+				<div class="row">
+					<div class="col-lg-5 col-md-5 col-xs-5">
+ 					 <label class= "cuadro" for="Contraseña"></label>
+ 						 <input type="password" placeholder="Password" name="password" id = "password" maxlength="50" required>
+						 <span style="color: red"  class='error'>
+								 <?php
+										 if (isset($errores['password'])) {
+												 echo "El password ingresado no es valido";
+										 }
+								 ?>
+						 </span>
+				 </div>
+				</div>
+			</div>
 		 <br>
+	   <br>
+
+		 <div class='container'>
+ 				<label for='username' >Avatar:</label><br/>
+ 				<input type='file' name='avatar'/><br/>
+ 				<span id='register_username_errorloc' class='error'></span>
+ 		</div>
+
+				 <div class="col-lg-2 col-md-2 col-xs-2">
+		 		 	<button class = "btn btn-success vermas" type="submit" value="Enviar">REGISTRARME</button>
+				</div>
+		 <br>
+		 <br>
+	 </fieldset>
+ 		</form>
 	 </header>
 	 <!--//////////////<CONTENIDO>///////////////-->
 
