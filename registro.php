@@ -62,7 +62,7 @@ if ($fueCompletado) {
 			<!--//////////////<CONTENIDO>///////////////-->
 
 		<header class ="fondoregistracion">
-		<form id='registro' action='registro.php' method='post' enctype="multipart/form-data">
+		<form id='register' action='registro.php' method='post' enctype="multipart/form-data">
 				<fieldset >
 		<br>
 

@@ -84,22 +84,14 @@
     <!--//////////////<CONTENIDO>///////////////-->
 
 
-      <!--//////////////<FOOTER>///////////////-->
-    <div class="container-fluid footer">
- 	 			<footer>
- 					<div class="container2">
- 		 			 <div class="row">
- 		 				 <div class="col-lg-10 col-md-10 col-xs-10">
- 		  		   		<p class = "espacio"></p>
- 		  				</div>
- 		 			 	<div class="col-lg-2 col-md-2 col-xs-2">
- 		 		   		<a class = "active" href="index.php" target="INICIO">VOLVER </a>
- 		 				</div>
- 		 			</div>
- 		 		</div>
- 	 			</footer>
+    <!--//////////////</FOOTER>///////////////-->
+        <div class="container-fluid footer">
+              <footer>
+                <p class="text-center">&copy; Copyright 2017  Andres Barrios - Brian Kavinoff - Javier Portela</p>
+              </footer>
+        </div>
       </div>
-        <!--//////////////<FOOTER>///////////////-->
+      <!--//////////////</FOOTER>///////////////-->
 
 </div>
 

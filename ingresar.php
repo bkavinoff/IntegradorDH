@@ -1,3 +1,19 @@
+<?php
+
+require_once "usuarios.php";
+
+if (isset($_REQUEST['submitted']) && $_REQUEST['submitted'] == 1) {
+  $user = buscarUsuario($_REQUEST['username']);
+
+  if ($user) {
+  header('Location: bienvenido.php');
+  } else {
+    echo "Aun no se encuentra registrado";
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,6 +23,8 @@
 		<link rel="stylesheet" href="css1/estilos.css">
 	</head>
 	<body>
+
+<div id='fg_membersite'>
 
 <div class="container">
 		<!--//////////////<MENU SUPERIOR>///////////////-->
@@ -38,35 +56,49 @@
 		<!--//////////////<CABECERA>///////////////-->
 
 		<!--//////////////<CONTENIDO>///////////////-->
+			<form id='register' action='ingresar.php' method='post' enctype="multipart/form-data">
 			<header class ="fondoregistracion">
-  		<form action="script.php" method="post">
 			<br>
-      <div class="container2">
+			<input type='hidden' name='submitted' id='submitted' value='1'/>
+      <div class="container1">
           <div class="row">
 		      <div class="col-lg-4 col-md-4 col-xs-4">
-		      <label class= "cuadro2" for="E-mail"></label>
-		        <input type="email" placeholder="Ingresa tu E-mail"name="correo" required>
+		      <label class= "cuadro" for="username"></label>
+		        <input type='text' placeholder="Ingresa tu usuario"name="username" id='username' value="" maxlength="50" required>
+						<span style="color: red"  class='error'>
+								<?php
+										if (isset($errores['username'])) {
+												echo "El usuario ingresado no es valido";
+										}
+								?>
           </div>
           </div>
         <br>
 
-
-          <div class="container3">
+          <div class="container2">
               <div class="row">
           <div class="col-lg-4 col-md-4 col-xs-4">
-				<label class= "cuadro"   for="Contraseña"> </label>
-					<input type="password" placeholder="Ingresa tu contraseña"name="Contraseña" required>
+				<label class= "cuadro" for="password"> </label>
+					<input type="password" placeholder="Ingresa tu contraseña"name="password"  id='password' value="" maxlength="50" required>
+					<span style="color: red"  class='error'>
+							<?php
+									if (isset($errores['password'])) {
+											echo "El password ingresado no es valido";
+									}
+							?>
+					</span>
 					<br>
 					<a href="#">¿Olvidaste tu contraseña?</a>
         </div>
         </div>
 			 <br>
 		   <br>
-		    <button type="button" class = "btn btn-success vermas">INGRESAR</button>
+		    <button type="submit" class = "btn btn-success vermas">INGRESAR</button>
 		    <br>
 		    <br>
 				<br>
 				</header>
+				</form>
 
 		<!--//////////////<CONTENIDO>///////////////-->
 

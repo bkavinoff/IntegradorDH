@@ -24,7 +24,6 @@ function guardarUsuario($nombre, $apellido, $correo, $usuario, $password, $foto)
           subirFoto($foto);
         }
 
-        return $resultado;
 
     } else {
         // Hubo errores
@@ -87,7 +86,7 @@ function buscarUsuario($username)
   while ($linea = fgets($fp)) {
     if (!empty($linea)) {
       $linea = json_decode($linea, true);
-      if ($linea['user'] == $apellido) {
+      if ($linea['user'] == $username) {
         return $linea;
       }
     }
