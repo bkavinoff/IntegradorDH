@@ -17,7 +17,8 @@ function guardarUsuario($nombre, $apellido, $correo, $usuario, $password, $foto)
             'apellido'   => $apellido,
             'correo'     => $correo,
             'user'       => $usuario,
-            'password'   => $password
+            'password'   => $password,
+            'avatar'     => encriptarFoto($foto)
         ]);
 
         if (escribirArchivoDeUsuario($jsonUser)) {
@@ -67,14 +68,21 @@ function validarUsuario($nombre, $apellido, $correo, $usuario, $password)
     return $errores;
 }
 
+function encriptarFoto($foto){
+  if (count($foto)) {
+      $avatarFileName = $foto['name'];
+      $avatarExtension = pathinfo($avatarFileName, PATHINFO_EXTENSION);
+
+      return md5($avatarFileName) . '.' . $avatarExtension;
+  }
+}
+
 function subirFoto($foto)
 {
   if (count($foto)) {
-      $avatarFileName = $foto['name'];
-      $avatarFile = $foto['tmp_name'];
-      $avatarExtension = pathinfo($avatarFileName, PATHINFO_EXTENSION);
 
-      $resultado = move_uploaded_file($avatarFile, 'avatars/' . md5($foto['name']) . '.' . $avatarExtension);
+    $avatarFile = $foto['tmp_name'];
+      $resultado = move_uploaded_file($avatarFile, 'avatars/' . encriptarFoto($foto));
   }
 
   return $resultado;
