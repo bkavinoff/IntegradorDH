@@ -2,11 +2,21 @@
 
 require_once "usuarios.php";
 
+
 if (isset($_REQUEST['submitted']) && $_REQUEST['submitted'] == 1) {
   $user = buscarUsuario($_REQUEST['username']);
 
   if ($user) {
-  header('Location: bienvenido.php');
+    //SETEAMOS LA COOKIE DE USUARIO
+    if (isset($_REQUEST['chkRecordarUsuario'])&& $_REQUEST['chkRecordarUsuario']=='recordar'){
+			setcookie('nombreUsuario',$_REQUEST['username'],time()+(3600*24*30));//1 mes
+			setcookie('passwordUsuario',$_REQUEST['password'],time()+(3600*24*30));//1 mes
+		}else{
+		    setcookie('nombreUsuario',$_REQUEST['username'],time()+10);//segundos
+		      setcookie('passwordUsuario',$_REQUEST['password'],time()+10);//segundos
+
+    }
+    header('Location: bienvenido.php');
   } else {
     echo "Aun no se encuentra registrado";
   }
@@ -72,14 +82,14 @@ if (isset($_REQUEST['submitted']) && $_REQUEST['submitted'] == 1) {
 			        				      		            }
 			        				                  ?>
 			        		                  </span></br>
+                                    <input type="checkbox" name="chkRecordarUsuario" value="recordar">Recordar Usuario</br>
 			        		                  <a style="color:black;" href="#">¿Olvidaste tu contraseña?</a>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-xs-4">
                                 </div>
                             </div>
-			                  </div>
+                          </div>
 		                    <button type="submit" class = "btn btn-success vermas">INGRESAR</button>
-			              </header>
 	              </form>
 		            <!--//////////////</CONTENIDO>///////////////-->
             </div>

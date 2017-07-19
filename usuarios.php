@@ -7,6 +7,7 @@ function guardarUsuario($nombre, $apellido, $correo, $usuario, $password, $foto)
     // Validar!
     $errores = validarUsuario($nombre, $apellido, $correo, $usuario, $password);
 
+
     if (empty($errores)) {
         // No hubo errores
         $password = sha1($password);
@@ -62,7 +63,7 @@ function validarUsuario($nombre, $apellido, $correo, $usuario, $password)
     }
 
     if (! validarPassword($password)) {
-        $errores['contraseña'] = "El password ingresado no es valido";
+        $errores['password'] = "El password ingresado no es valido";
     }
 
     return $errores;
