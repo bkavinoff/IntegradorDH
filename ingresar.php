@@ -31,7 +31,7 @@ if (isset($_REQUEST['submitted']) && $_REQUEST['submitted'] == 1) {
   		<?php require "cabecera.php";?>
     </head>
     <body>
-        <div class="container">
+        <div class="container-fluid">
             <div>
 		            <!--//////////////<MENU SUPERIOR>///////////////-->
 		            <?php require "navbar.php";?>

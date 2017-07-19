@@ -7,7 +7,7 @@
         <title>TP Integrador</title>
     </head>
     <body>
-        <div class="container">
+        <div class="container-fluid">
             <!--//////////////<MENU SUPERIOR>///////////////-->
             <?php require "navbar.php";?>
             <!--//////////////</MENU SUPERIOR>///////////////-->
