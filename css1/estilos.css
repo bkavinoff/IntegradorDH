@@ -43,18 +43,6 @@ div ul li a:hover, .navbar-brand:hover{
   color:rgb(19, 90, 28);
 }
 
-.fondo-azul{
-  background-color: blue;
-}
-
-.fondo-rojo{
-  background-color: red;
-}
-
-.fondo-verde{
-  background-color: green;
-}
-
 .producto{
   border:1px solid rgba(100,100,100,0.2);
   background-color: white;
@@ -81,6 +69,8 @@ div ul li a:hover, .navbar-brand:hover{
   background-color: rgba(0, 0, 0, 0.4);
   color: black;
   padding:3%;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
 }
 
 footer p{

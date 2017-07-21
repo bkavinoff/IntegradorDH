@@ -1,7 +1,7 @@
 <?php
-
 require_once "usuarios.php";
 
+verificarUserLogueado();
 
 if (isset($_REQUEST['submitted']) && $_REQUEST['submitted'] == 1) {
   $user = buscarUsuario($_REQUEST['username']);
@@ -12,8 +12,8 @@ if (isset($_REQUEST['submitted']) && $_REQUEST['submitted'] == 1) {
 			setcookie('nombreUsuario',$_REQUEST['username'],time()+(3600*24*30));//1 mes
 			setcookie('passwordUsuario',$_REQUEST['password'],time()+(3600*24*30));//1 mes
 		}else{
-		    setcookie('nombreUsuario',$_REQUEST['username'],time()+10);//segundos
-		      setcookie('passwordUsuario',$_REQUEST['password'],time()+10);//segundos
+		    setcookie('nombreUsuario',$_REQUEST['username'],time()+3600);//segundos (equivale a 1 hora)
+		      setcookie('passwordUsuario',$_REQUEST['password'],time()+3600);//segundos (equivale a 1 hora)
 
     }
     header('Location: bienvenido.php');
@@ -37,12 +37,13 @@ if (isset($_REQUEST['submitted']) && $_REQUEST['submitted'] == 1) {
 		            <?php require "navbar.php";?>
 		            <!--//////////////</MENU SUPERIOR>///////////////-->
   	            <!--//////////////<CABECERA>///////////////-->
-		            <div class="main-header">
-		                <div class="jumbotron text-center">
-		                    <h1>ACCEDER</h1>
-		    		        		<div class="parrafo">Escribe tu e-mail y contraseña para ingresar.</div>
-	                  </div>
-		            </div>
+                <div class="container">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        Ingreso al sitio
+                    </div>
+
+                </div>
                 <br>
 		            <!--//////////////</CABECERA>///////////////-->
 		            <!--//////////////<CONTENIDO>///////////////-->

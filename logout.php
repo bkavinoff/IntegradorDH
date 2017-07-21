@@ -1,4 +1,6 @@
 <?php
+require "validaciones.php";
+verificarUserDeslogueado();
 //borro COOKIE en caso de solicitarlo
 if (isset($_GET['logout'])){
   if ($_GET['logout']==1){

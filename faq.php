@@ -12,11 +12,13 @@
       <!--//////////////</MENU SUPERIOR>///////////////-->
 
       <!--//////////////<CABECERA>///////////////-->
-      <div class="main-header">
-        <div class="jumbotron text-center">
-          <h1>¿Tenés dudas sobre nuestros servicios?</h1>
-        </div>
-        </div>
+      <div class="container">
+      <div class="panel panel-success">
+          <div class="panel-heading">
+              Preguntas Frecuentes
+          </div>
+
+      </div>
 
       <!--//////////////<CABECERA>///////////////-->
 
@@ -67,14 +69,10 @@
 
     <!--//////////////<CONTENIDO>///////////////-->
 
-
+</div>
     <!--//////////////</FOOTER>///////////////-->
-        <div class="container-fluid footer">
-              <footer>
-                <p class="text-center">&copy; Copyright 2017  Andres Barrios - Brian Kavinoff - Javier Portela</p>
-              </footer>
-        </div>
-      </div>
+        <?php require "footer.php";?>
+
       <!--//////////////</FOOTER>///////////////-->
 
 </div>

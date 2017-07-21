@@ -11,7 +11,7 @@
         <ul class="nav navbar-nav navbar-right">
           <?php
               if (isset($_COOKIE["nombreUsuario"])){
-                  echo ('<li><a href="#">'."¡Bienvenido ".$_COOKIE["nombreUsuario"].'!</a></li>');
+                  echo ('<li><a href="#">'."Usuario: ".$_COOKIE["nombreUsuario"].'</a></li>');
                   echo ('<li><a href="logout.php?logout=1">LOG OUT</a></li>');
               }else{
                   echo ('<li><a href="registro.php">Registrarse</a></li>

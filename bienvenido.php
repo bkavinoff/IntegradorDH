@@ -1,5 +1,6 @@
 <?php
-
+		require "validaciones.php";
+		verificarUserDeslogueado();
 
  ?>
 
@@ -17,26 +18,21 @@
 		<!--//////////////</MENU SUPERIOR>///////////////-->
 
   	<!--//////////////<CABECERA>///////////////-->
-					<div class="main-header">
-						<div class="jumbotron text-center">
-		        <h1>BIENVENIDO</h1>
-						<div class="parrafo">Gracias por volver a nuestra pagina</div>
-					</div>
-				</div>
+	<div class="container">
+	<div class="panel panel-success">
+		<div class="panel-heading">
+			<?php echo '¡Bienvenido ' . $_COOKIE["nombreUsuario"].'! Ya podés navegar en nuestro sitio completo. '?>
+		</div>
+
+	</div>
     <br>
 		<!--//////////////<CABECERA>///////////////-->
 
 
 		<!--//////////////</FOOTER>///////////////-->
-			<div class="container-fluid footer">
-						<footer>
-							<p class="text-center">&copy; Copyright 2017  Andres Barrios - Brian Kavinoff - Javier Portela</p>
-						</footer>
-			</div>
+			<?php require "footer.php";?>
 		</div>
 		<!--//////////////</FOOTER>///////////////-->
-
-</div>
 
 	</body>
 </html>

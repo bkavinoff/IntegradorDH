@@ -1,4 +1,8 @@
-<?php   session_start(); ?>
+<?php
+    session_start();
+    require "validaciones.php";
+    verificarUserDeslogueado();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -22,51 +26,52 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-4 fondo-azul producto">
-                        <img src="images/Iphone.png" alt="Iphone" class="imgProducto">
-            				    <h2 class="tituloProducto">Producto</h2>
-            				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
-            				    <button type="button" class="btn btn-success vermas">Ver Mas</button>
+                        <img src="images/Iphone.png" alt="Iphone" class="imgProducto"></img>
+            			<h2 class="tituloProducto">Producto</h2>
+            		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
+            			<button type="button" class="btn btn-success vermas">Ver Mas</button>
                     </div>
                     <div class="col-sm-4 fondo-rojo producto">
-                        <img src="images/SmartphonesAndroid.png" alt="SmartphonesAndroid" class="imgProducto">
-            				    <h2 class="tituloProducto">Producto</h2>
-            				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
-            				    <button type="button" class="btn btn-success vermas">Ver Mas</button>
+                        <img src="images/SmartphonesAndroid.png" alt="SmartphonesAndroid" class="imgProducto"></img>
+            			<h2 class="tituloProducto">Producto</h2>
+            			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
+            			<button type="button" class="btn btn-success vermas">Ver Mas</button>
                     </div>
                     <div class="col-sm-4 fondo-verde producto">
-                        <img src="images/Tablet.png" alt="Tablet" class="imgProducto">
-            				    <h2 class="tituloProducto">Producto</h2>
-            				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
-            				    <button type="button" class="btn btn-success vermas">Ver Mas</button>
+                        <img src="images/Tablet.png" alt="Tablet" class="imgProducto"></img>
+            			<h2 class="tituloProducto">Producto</h2>
+            			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
+            			<button type="button" class="btn btn-success vermas">Ver Mas</button>
                     </div>
                 </div>
             </div>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-4 fondo-azul producto">
-                        <img src="images/PC.png" alt="PC" class="imgProducto">
-            				    <h2 class="tituloProducto">Producto</h2>
-            				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
-            				    <button type="button" class="btn btn-success vermas">Ver Mas</button>
+                        <img src="images/PC.png" alt="PC" class="imgProducto"></img>
+            			<h2 class="tituloProducto">Producto</h2>
+            			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
+            			<button type="button" class="btn btn-success vermas">Ver Mas</button>
                     </div>
                     <div class="col-sm-4 fondo-rojo producto">
-                        <img src="images/Notebook.png" alt="Notebook" class="imgProducto">
-            				    <h2 class="tituloProducto">Producto</h2>
-            				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
-            				    <button type="button" class="btn btn-success vermas">Ver Mas</button>
+                        <img src="images/Notebook.png" alt="Notebook" class="imgProducto"></img>
+            			<h2 class="tituloProducto">Producto</h2>
+            			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
+            			<button type="button" class="btn btn-success vermas">Ver Mas</button>
                     </div>
                     <div class="col-sm-4 fondo-verde producto">
-                        <img src="images/Presupuestos.png" alt="Presupuestos" class="imgProducto">
-            				    <h2 class="tituloProducto">Producto</h2>
-            				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
-            				    <button type="button" class="btn btn-success vermas">Ver Mas</button>
+                        <img src="images/Presupuestos.png" alt="Presupuestos" class="imgProducto"></img>
+            			<h2 class="tituloProducto">Producto</h2>
+            			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut recusandae eaque debitis sint necessitatibus, officia ex.</p>
+            			<button type="button" class="btn btn-success vermas">Ver Mas</button>
                     </div>
                 </div>
             </div>
             <!--//////////////</CONTENIDO>///////////////-->
+
+            <!--//////////////<FOOTER>///////////////-->
+            <?php require "footer.php";?>
+            <!--//////////////</FOOTER>///////////////-->
       </div>
-      <!--//////////////</FOOTER>///////////////-->
-      <?php require "footer.php";?>
-      <!--//////////////</FOOTER>///////////////-->
     </body>
 </html>
