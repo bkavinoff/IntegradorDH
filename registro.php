@@ -72,85 +72,86 @@
                   					<span style="color: red"  class='error'>
                   						<?php
                   							if (isset($resultado['apellido'])) {
-                  														echo "El apellido ingresado no es valido";
-                                          }
-                  										?>
-                    							</span>
-                  						</div>
+                  							    echo "El apellido ingresado no es valido";
+                                            }
+                  						?>
+                    				</span>
                   				</div>
-                			</div>
-                			<br>
-  			              <div class="container2">
-                  				<div class="form-group">
-                    					<div class="col-lg-12 col-md-12 col-xs-12">
-                                <?php
-                                    if (!isset($resultado['correo'])&&(isset($_REQUEST['correo']))){
-                                      $correoOK= $_REQUEST['correo'];
-                                    }else{$correoOK="";}
-                                ?>
-                     		        	<input class="form-control" type="text" placeholder="E-mail" name="correo" id = "correo" value="<?php echo $correoOK ?>"  maxlength="50" required>
-                    							<span style="color: red"  class='error'>
-                    									<?php
-                    											if (isset($resultado['correo'])) {
-                    													echo "El E-mail ingresado no es valido";
-                    											}
-                    									?>
-                    							</span>
-                  						</div>
+                  			</div>
+                		</div>
+                		<br>
+  			            <div class="container2">
+                  			<div class="form-group">
+                    			<div class="col-lg-12 col-md-12 col-xs-12">
+                                    <?php
+                                        if (!isset($resultado['correo'])&&(isset($_REQUEST['correo']))){
+                                            $correoOK= $_REQUEST['correo'];
+                                        }else{$correoOK="";}
+                                    ?>
+                     		        <input class="form-control" type="text" placeholder="E-mail" name="correo" id = "correo" value="<?php echo $correoOK ?>"  maxlength="50" required>
+                    				<span style="color: red"  class='error'>
+                    					<?php
+                    						if (isset($resultado['correo'])) {
+                    							echo "El E-mail ingresado no es valido";
+                    						}
+                    					?>
+                    				</span>
                   				</div>
-                			</div>
-                			<br>
-                			<div class="container2">
-                  				<div class="form-group">
-                    					<div class="col-lg-12 col-md-12 col-xs-12">
-                                <?php
-                                    if (!isset($resultado['username'])&&(isset($_REQUEST['username']))){
-                                      $usernameOK= $_REQUEST['username'];
-                                    }else{$usernameOK="";}
-                                ?>
-                      						<input class="form-control" type='text' placeholder="Nombre de Usuario" name='username' id='username' value='<?php echo $usernameOK ?>' maxlength="50" />
-                      						<span style="color: red"  class='error'><?php if (isset($resultado['username'])) {echo "El username ingresado no es valido";}?></span>
-                        			</div>
+                  			</div>
+                		</div>
+                		<br>
+                		<div class="container2">
+                  			<div class="form-group">
+                    			<div class="col-lg-12 col-md-12 col-xs-12">
+                                    <?php
+                                        if (!isset($resultado['username'])&&(isset($_REQUEST['username']))){
+                                            $usernameOK= $_REQUEST['username'];
+                                        }else{$usernameOK="";}
+                                    ?>
+                      				<input class="form-control" type='text' placeholder="Nombre de Usuario" name='username' id='username' value='<?php echo $usernameOK ?>' maxlength="50" />
+                      				<span style="color: red"  class='error'><?php if (isset($resultado['username'])) {echo "El username ingresado no es valido";}?></span>
+                        		</div>
                       		</div>
                     	</div>
-                    	<!--<br>-->
-                			<div class="container2">
-                  				<div class="form-group">
-                    					<div class="col-lg-12 col-md-12 col-xs-12">
-                                  <input class="form-control" type="password" placeholder="Password" name="password" id = "password" maxlength="50" required>
-                                  <span style="color: red"  class='error'>
-                                      <?php
-                                          if (isset($resultado['password'])) {
-                  												    echo "El password ingresado no es valido";
-                      										 }
-                      								 ?>
-                    			 			 </span>
-                    				  </div>
-                				 </div>
+                        <br>
+                		<div class="container2">
+                  			<div class="form-group">
+                    			<div class="col-lg-12 col-md-12 col-xs-12">
+                                    <input class="form-control" type="password" placeholder="Password" name="password" id = "password" maxlength="50" required>
+                                    <span style="color: red"  class='error'>
+                                        <?php
+                                            if (isset($resultado['password'])) {
+                  								echo "El password ingresado no es valido";
+                      						}
+                      					?>
+                    			 	</span>
+                    			</div>
+                			</div>
               			</div>
-                    <br>
-              	    <br>
-                  	<div class='container2'>
-                      <div class="form-group ">
-                        <div class="col-lg-12 col-md-12 col-xs-12">
-                 				<label for='avatar' >Avatar:</label><br/>
-                     		<input class="form-control" type='file' name='avatar'/><br/>
-                     		<span id='register_username_errorloc' class='error'></span>
-                      </div>
-                      </div>
-                    </div>
-  				          <div class="col-lg-2 col-md-2 col-xs-2">
-              		 		 	<button class = "btn btn-success vermas" type="submit" value="Enviar">REGISTRARME</button>
-            				</div>
-                    <br>
-                    <br>
-                </form>
-            </div>
+                        <br>
+              	        <br>
+                  	    <div class='container2'>
+                            <div class="form-group ">
+                                <div class="col-lg-12 col-md-12 col-xs-12">
+                 				    <label for='avatar' >Avatar:</label><br/>
+                     		        <input class="form-control" type='file' name='avatar'/><br/>
+                     		        <span id='register_username_errorloc' class='error'></span>
+                                </div>
+                            </div>
+                        </div>
+  				        <div class="col-lg-2 col-md-2 col-xs-2">
+              		 		<button class = "btn btn-success vermas" type="submit" value="Enviar">REGISTRARME</button>
+            			</div>
+                        <br>
+                        <br>
+                    </form>
+                </div>
             </div>
   	        <!--//////////////</CONTENIDO>///////////////-->
-        	  <!--//////////////</FOOTER>///////////////-->
-        		<?php require "footer.php";?>
-            <!--//////////////</FOOTER>///////////////-->
 
-  	 </body>
+        	<!--//////////////<FOOTER>///////////////-->
+        	<?php require "footer.php";?>
+            <!--//////////////</FOOTER>///////////////-->
+        </div>
+  	</body>
 </html>
