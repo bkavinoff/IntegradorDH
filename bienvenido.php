@@ -11,22 +11,22 @@
 	</head>
 	<body>
 		<div class="container-fluid">
-		<!--//////////////<MENU SUPERIOR>///////////////-->
-		<?php require "navbar.php";?>
-		<!--//////////////</MENU SUPERIOR>///////////////-->
-  		<!--//////////////<CABECERA>///////////////-->
-		<div class="container">
-			<div class="panel panel-success">
-				<div class="panel-heading">
-					<?php echo '¡Bienvenido ' . $_COOKIE["nombreUsuario"].'! Ya podés navegar en nuestro sitio completo. '?>
+			<!--//////////////<MENU SUPERIOR>///////////////-->
+			<?php require "navbar.php";?>
+			<!--//////////////</MENU SUPERIOR>///////////////-->
+  			<!--//////////////<CABECERA>///////////////-->
+			<div class="container">
+				<div class="panel panel-success text-center">
+					<div class="panel-heading">
+						<?php echo '¡Bienvenido ' . $_COOKIE["nombreUsuario"].'! Ya podés navegar en nuestro sitio completo. '?>
+					</div>
 				</div>
-
 			</div>
-    	<br>
-		<!--//////////////<CABECERA>///////////////-->
-		<!--//////////////</FOOTER>///////////////-->
-		<?php require "footer.php";?>
+    		<br>
+			<!--//////////////<CABECERA>///////////////-->
+			<!--//////////////</FOOTER>///////////////-->
+			<?php require "footer.php";?>
+			<!--//////////////</FOOTER>///////////////-->
 		</div>
-		<!--//////////////</FOOTER>///////////////-->
 	</body>
 </html>

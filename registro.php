@@ -26,7 +26,7 @@
           	<!--//////////////</MENU SUPERIOR>///////////////-->
           	<!--//////////////<CABECERA>///////////////-->
             <div class="container">
-                <div class="panel panel-success">
+                <div class="panel panel-success text-center">
                     <div class="panel-heading">
                         Registro de nuevo usuario
                     </div>
