@@ -32,9 +32,12 @@
                     </div>
                 </div>
           		<!--//////////////</CABECERA>///////////////-->
+                <span class="RegistroOK ">
+                        <?php if ($registroOK) {echo "<div class=\"alert alert-info text-center\" role=\"alert\"><strong>HECHO!!</strong> El usuario se ha registrado con éxito.</div>";}?>
+                </span>
         		<!--//////////////<CONTENIDO>///////////////-->
           		<div class ="fondoregistracion container-fluid">
-                    <div><span class="RegistroOK"><?php if ($registroOK) {echo "USUARIO REGISTRADO CORRECTAMENTE";}?></span></div>
+
               		<form id='register' action='registro.php' method='post' enctype="multipart/form-data">
                   		<input type='hidden' name='submitted' id='submitted' value='1'/>
                   		<div>

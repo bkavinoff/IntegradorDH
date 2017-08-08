@@ -1,9 +1,12 @@
-<nav class="navbar"><!--   navbar-inverse  -->
+<nav class="navbar">
     <div class="container">
         <div class="navbar-header">
+            <button type="button" class="navbar-toggle btn btn-default btn-sm" data-toggle="collapse" data-target="#NavBarNormal">
+              <span><img class="btn-nav" src="images/menu-hamburguer.png" width="22" height="18" alt="Menu" /></span>
+            </button>
             <a class="navbar-brand" href="#">Integrador DH</a>
         </div>
-        <div class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse" id="NavBarNormal">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index.php">Inicio</a></li>
                 <li><a href="faq.php">F.A.Q.</a></li>

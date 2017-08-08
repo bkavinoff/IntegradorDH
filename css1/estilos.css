@@ -55,14 +55,9 @@
             color: white;
         }
 
-    .navbar-brand
-        {
-            color: white;
-        }
-
     a
         {
-            color:black;
+            color:white;
             text-decoration: none;
         }
 
@@ -70,6 +65,11 @@
         {
             color:rgba(22, 160, 133,1.0);
         }
+    .btn-nav
+    {
+
+        background-color: rgba(0, 0, 0, 0.4);
+    }
 /******************</NAVBAR>**************/
 
 /******************<PAGINA>**************/
