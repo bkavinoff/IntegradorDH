@@ -6,7 +6,7 @@
     $registroOK=false;
     //$errores   = 0 ;
     if ($fueCompletado) {
-        $resultado = guardarUsuario($_REQUEST['nombre'], $_REQUEST['apellido'], $_REQUEST['correo'], $_REQUEST['username'], $_REQUEST['password'], $_FILES['avatar']);
+        $resultado = guardarUsuario($_REQUEST['nombre'], $_REQUEST['correo'], $_REQUEST['username'], $_REQUEST['password'], $_FILES['avatar']);
         if (!(is_array($resultado) && ! empty($resultado))) {
             $registroOK=true;
         }
@@ -62,26 +62,6 @@
                     		    </div>
                   		    </div>
                 	    </div>
-                		<br>
-                		<div class="container2">
-                            <div class="form-group">
-                                <div class="col-lg-12 col-md-12 col-xs-12">
-                                    <?php
-                                        if (!isset($resultado['apellido'])&&(isset($_REQUEST['apellido']))){
-                                            $apellidoOK= $_REQUEST['apellido'];
-                                        }else{$apellidoOK="";}
-                                    ?>
-                   					<input class="form-control" type="text" placeholder="Apellido" name="apellido" id = "apellido" value="<?php echo $apellidoOK ?>" maxlength="50" required>
-                  					<span style="color: red"  class='error'>
-                  						<?php
-                  							if (isset($resultado['apellido'])) {
-                  							    echo "El apellido ingresado no es valido";
-                                            }
-                  						?>
-                    				</span>
-                  				</div>
-                  			</div>
-                		</div>
                 		<br>
   			            <div class="container2">
                   			<div class="form-group">
